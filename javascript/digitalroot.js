@@ -1,3 +1,5 @@
+//Calculating digital root
+
 function digital_root(num) {
     var str = num.toString();
     while (str.length != 1) {

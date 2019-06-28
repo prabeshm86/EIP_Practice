@@ -1,3 +1,5 @@
+//permutation using recursion
+
 function permutations(arr) {
     if (arr.length == 0) {
       return [[]];

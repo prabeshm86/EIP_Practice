@@ -1,3 +1,5 @@
+//fibonacci implementation using loop and recursion
+
 function fib(n) {
     var first = 1;
     var second = 1;
@@ -13,7 +15,7 @@ function fib(n) {
     return arr;
 
 }
-
+// Recursive function 
 function fibs(n) {
     arr = [1, 1];
     if (n <= 2) {
