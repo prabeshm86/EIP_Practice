@@ -23,6 +23,38 @@ function minimumBribe(arr){
 
 console.log(minimumBribe([2,1,5,3,4]));
 
+function minBribe(arr){
+    var expectedFirst = arr[0];
+    var expectedSecond = arr[1];
+    var expectedThird = arr[2];
+
+    var totalBribe = 0;
+    for (i= 0; i<arr.length; i ++){
+        if (arr[i]== expectedFirst){
+            expectedFirst == expectedSecond;
+            expectedSecond = expectedThird;
+            expectedThird++;
+        }
+        else if(arr[i] == expectedSecond)
+        {
+            totalBribe++;
+            expectedSecond = expectedThird;
+            expectedThird++;
+
+        }
+        else if (arr[i] == expectedThird)
+        {
+            totalBribe = totalBribe+2;
+            expectedThird++;
+        }
+        else{
+            return "Too chaotic";
+        }
+    }
+
+    return totalBribe;
+}
+
 
 // void minimumBribes(vector<int> q) {
 //     int totalBribes = 0;
